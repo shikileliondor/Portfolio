@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mes Certificats</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+  </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+
+<!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4">
+      <div class="text-2xl font-bold text-blue-600" data-i18n="brand">Mon Portfolio</div>
+      <div class="hidden md:flex space-x-6 text-sm">
+        <a href="index.html" class="hover:text-blue-600 transition" data-i18n="nav_home">Accueil</a>
+        <a href="propos.html" class="hover:text-blue-600 transition" data-i18n="nav_about">À propos</a>
+        <a href="certif.html" class="hover:text-blue-600 transition" data-i18n="nav_certificates">Certificats</a>
+        <a href="projet.html" class="hover:text-blue-600 transition" data-i18n="nav_projects">Projets</a>
+        <a href="contact.html" class="hover:text-blue-600 transition" data-i18n="nav_contact">Contact</a>
+      </div>
+      <button id="toggleLang" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        English
+      </button>
+    </nav>
+  </header>
+
+  <!-- Section Titre -->
+  <section class="text-center py-8">
+    <h1 class="text-3xl font-bold text-blue-700">Mes Certificats</h1>
+    <p class="text-gray-600 mt-2">Voici quelques certifications obtenues</p>
+  </section>
+
+  <!-- Section Certificats -->
+  <main class="max-w-7xl mx-auto px-4 pb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Certificat 1 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="1.jpeg" alt="Certificat en productivité professionnelle" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-blue-600">Certificat en productivité professionnelle</h2>
+        </div>
+      </div>
+
+      <!-- Certificat 2 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="Cisco.jpeg" alt="Certificat Cisco Academy" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-blue-600">Introduction à la cybersécurité</h2>
+        </div>
+      </div>
+
+      <!-- Certificat 3 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="3.jpeg" alt="Certificat Excel" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-blue-600">Excel Specialist</h2>
+        </div>
+      </div>
+
+      <!-- Certificat 4 -->
+      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <img src="2.jpeg" alt="Certificat Data Literacy" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-bold text-blue-600">Littératie des données</h2>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6 border-t">
+    © 2025 Morel Effobi. Tous droits réservés.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title">Contact | Mon Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- ======================= HEADER / NAVBAR ======================= -->
+  <header class="bg-white shadow">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4 relative">
+      
+      <!-- Logo / Marque -->
+      <div class="text-2xl font-bold text-blue-600" data-i18n="brand">Mon Portfolio</div>
+
+      <!-- Bouton menu mobile -->
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <!-- Menu desktop -->
+      <div class="hidden md:flex space-x-6 text-sm" id="menu">
+        <a href="index.html" class="hover:text-blue-600 transition" data-i18n="nav_home">Accueil</a>
+        <a href="propos.html" class="hover:text-blue-600 transition" data-i18n="nav_about">À propos</a>
+        <a href="certif.html" class="hover:text-blue-600 transition" data-i18n="nav_certificates">Certificats</a>
+        <a href="projet.html" class="hover:text-blue-600 transition" data-i18n="nav_projects">Projets</a>
+        <a href="contact.html" class="hover:text-blue-600 transition" data-i18n="nav_contact">Contact</a>
+      </div>
+
+      <!-- Bouton de changement de langue -->
+      <button id="toggleLang" class="ml-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        English
+      </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md px-4 py-4 z-20">
+      <a href="index.html" class="block py-2 border-b border-gray-200">Accueil</a>
+      <a href="propos.html" class="block py-2 border-b border-gray-200">À propos</a>
+      <a href="projet.html" class="block py-2 border-b border-gray-200">Projets</a>
+      <a href="certif.html" class="block py-2 border-b border-gray-200">Certificats</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+    </div>
+  </header>
+
+  <!-- ======================= SECTION CONTACT ======================= -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-4">
+    <div class="max-w-md w-full bg-white p-6 rounded-lg shadow-md">
+      
+      <!-- Titre -->
+      <h2 class="text-2xl font-bold text-center text-blue-600 mb-4" data-i18n="contact_title">Contactez-moi</h2>
+      <p class="text-center text-gray-600 mb-6" data-i18n="contact_desc">
+        Vous pouvez m’écrire directement via le formulaire ou me retrouver ici :
+      </p>
+
+      <!-- Réseaux sociaux -->
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="https://github.com/shikileliondor" target="_blank" title="GitHub" class="text-gray-700 hover:text-black transition">
+          <!-- GitHub Icon -->
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 .5C5.73.5.5 5.74.5 12.02c0 5.09 3.29 9.41 7.86 10.94.57.1.78-.25.78-.55v-2c-3.2.69-3.87-1.55-3.87-1.55-.52-1.32-1.28-1.67-1.28-1.67-1.05-.71.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.97.1-.74.4-1.26.72-1.55-2.56-.3-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.2-3.09-.12-.3-.52-1.51.12-3.16 0 0 .98-.31 3.2 1.18.93-.26 1.94-.4 2.94-.4 1 0 2.01.13 2.95.4 2.21-1.5 3.19-1.18 3.19-1.18.64 1.65.24 2.86.12 3.16.75.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.38-5.27 5.67.41.36.78 1.08.78 2.18v3.23c0 .3.21.66.79.55A10.52 10.52 0 0023.5 12C23.5 5.74 18.26.5 12 .5z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/yann-morel-effobi-5474782a1/" target="_blank" title="LinkedIn" class="text-gray-700 hover:text-blue-600 transition">
+          <!-- LinkedIn Icon -->
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.48c0 1.1.88 1.98 1.98 1.98 1.1 0 1.98-.88 1.98-1.98 0-1.1-.88-1.98-1.98-1.98zM2 8.98h5.96V22H2V8.98zM9.98 8.98H16v1.8h.09c.84-1.59 2.9-2.18 4.48-1.39 1.33.65 2.07 1.99 2.07 4.15V22H17.6v-7.13c0-1.7-.6-2.87-2.1-2.87-1.15 0-1.84.77-2.14 1.51-.11.27-.14.65-.14 1.03V22H9.98V8.98z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Formulaire -->
+      <form action="mailto:tonmail@example.com" method="POST" enctype="text/plain" class="space-y-4">
+        <div>
+          <label class="block mb-1 text-sm font-semibold" data-i18n="label_name">Nom</label>
+          <input type="text" name="Nom" required 
+                 class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm font-semibold" data-i18n="label_email">Email</label>
+          <input type="email" name="Email" required 
+                 class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+          <label class="block mb-1 text-sm font-semibold" data-i18n="label_message">Message</label>
+          <textarea name="Message" rows="3" required 
+                    class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+        <button type="submit" 
+                class="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+                data-i18n="btn_send">
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="text-center py-6 bg-white shadow mt-20">
+    <p class="text-gray-600" data-i18n="footer">&copy; 2025 Morel Effobi. Tous droits réservés.</p>
+  </footer>
+
+  <!-- ======================= SCRIPTS ======================= -->
+  <script>
+    // Traductions
+    const translations = {
+      fr: {
+        title: "Contact | Mon Portfolio",
+        contact_title: "Contactez-moi",
+        contact_desc: "Vous pouvez m’écrire directement via le formulaire ou me retrouver ici :",
+        label_name: "Nom",
+        label_email: "Email",
+        label_message: "Message",
+        btn_send: "Envoyer",
+        footer: "&copy; 2025 Morel Effobi. Tous droits réservés.",
+        nav_home: "Accueil"
+      },
+      en: {
+        title: "Contact | My Portfolio",
+        contact_title: "Contact Me",
+        contact_desc: "You can write me directly using the form or find me here:",
+        label_name: "Name",
+        label_email: "Email",
+        label_message: "Message",
+        btn_send: "Send",
+        footer: "&copy; 2025 Morel Effobi. All rights reserved.",
+        nav_home: "Home"
+      }
+    };
+
+    let currentLang = 'fr';
+
+    // Changement de langue
+    document.getElementById('toggleLang').addEventListener('click', () => {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      document.getElementById('toggleLang').textContent = currentLang === 'fr' ? 'English' : 'Français';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.innerHTML = translations[currentLang][key];
+        }
+      });
+      document.title = translations[currentLang].title;
+    });
+
+    // Toggle menu mobile
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>

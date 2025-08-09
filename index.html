@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="title">Accueil | Mon Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4">
+      <div class="text-2xl font-bold text-blue-600" data-i18n="brand">Mon Portfolio</div>
+      <div class="hidden md:flex space-x-6 text-sm">
+        <a href="index.html" class="hover:text-blue-600 transition" data-i18n="nav_home">Accueil</a>
+        <a href="propos.html" class="hover:text-blue-600 transition" data-i18n="nav_about">À propos</a>
+        <a href="certif.html" class="hover:text-blue-600 transition" data-i18n="nav_certificates">Certificats</a>
+        <a href="projet.html" class="hover:text-blue-600 transition" data-i18n="nav_projects">Projets</a>
+        <a href="contact.html" class="hover:text-blue-600 transition" data-i18n="nav_contact">Contact</a>
+      </div>
+      <button id="toggleLang" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        English
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="text-center py-20 px-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white fade-in">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+      <img src="azerty.jpeg" alt="Ma photo" class="rounded-full shadow-lg w-48 h-48 object-cover border-4 border-white">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4" data-i18n="hero_title">Bienvenue sur mon portfolio</h1>
+        <p class="text-lg md:text-xl mb-6" data-i18n="hero_desc">Je suis Morel Effobi, développeur passionné par le web et les logiciels.</p>
+        <a href="projet.html" class="inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition" data-i18n="btn_projects">Voir mes projets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="about" class="py-16 px-4 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-6 text-blue-600" data-i18n="about_title">À propos de moi</h2>
+    <p class="max-w-3xl mx-auto text-lg" data-i18n="about_bio">
+      Je suis Morel Effobi, étudiant en Génie Logiciel. Je suis passionné par le développement web, la programmation et la conception de solutions numériques efficaces. Je combine rigueur, créativité et curiosité dans mes projets. Mon objectif est de contribuer à des projets innovants tout en renforçant mes compétences en développement full-stack.
+    </p>
+  </section>
+  <!-- Projets -->
+  <section id="projects" class="py-16 px-4 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-10 text-blue-600" data-i18n="projects_title">Mes projets</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-50 p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">Gestion Église</h3>
+        <p>Application web de gestion de membres d’une église.</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">Site de Reservation de ticket</h3>
+        <p>Plateforme de réservation de tickets en ligne via WhatsApp</p>
+      </div>
+      <div class="bg-gray-50 p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">Bibliothèque Nationale</h3>
+        <p>Site vitrine de la Bibliothèque Nationale de Côte d’Ivoire avec catalogue consultable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-4 bg-gray-100 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-blue-600" data-i18n="contact_title">Contactez-moi</h2>
+    <form action="mailto:morelyann10@gmail.com.com" method="POST" enctype="text/plain" class="max-w-xl mx-auto text-left space-y-4">
+      <input type="text" name="name" placeholder="Votre nom" required class="w-full px-4 py-2 border rounded">
+      <input type="email" name="email" placeholder="Votre email" required class="w-full px-4 py-2 border rounded">
+      <textarea name="message" placeholder="Votre message" rows="5" required class="w-full px-4 py-2 border rounded"></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Envoyer</button>
+    </form>
+
+    <div class="flex justify-center gap-6 mt-8 text-2xl text-blue-600">
+      <a href="https://www.linkedin.com/in/yann-morel-effobi-5474782a1/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/shikileliondor" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 bg-white shadow mt-20">
+    <p class="text-gray-600" data-i18n="footer">&copy; 2025 Morel Effobi. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Traduction -->
+  <script>
+    const translations = {
+      fr: {
+        title: "Accueil | Mon Portfolio",
+        brand: "Mon Portfolio",
+        nav_home: "Accueil",
+        nav_about: "À propos",
+        nav_certificates: "Certificats",
+        nav_projects: "Projets",
+        nav_contact: "Contact",
+        hero_title: "Bienvenue sur mon portfolio",
+        hero_desc: "Je suis Morel Effobi, développeur passionné par le web et les logiciels.",
+        btn_projects: "Voir mes projets",
+        about_title: "À propos de moi",
+        about_bio: "Je suis Morel Effobi, étudiant en Génie Logiciel. Je suis passionné par le développement web, la programmation et la conception de solutions numériques efficaces. Je combine rigueur, créativité et curiosité dans mes projets. Mon objectif est de contribuer à des projets innovants tout en renforçant mes compétences en développement full-stack.",
+        projects_title: "Mes projets",
+        contact_title: "Contactez-moi",
+        footer: "© 2025 Morel Effobi. Tous droits réservés."
+      },
+      en: {
+        title: "Home | My Portfolio",
+        brand: "My Portfolio",
+        nav_home: "Home",
+        nav_about: "About",
+        nav_certificates: "Certificates",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+        hero_title: "Welcome to my portfolio",
+        hero_desc: "I'm Morel Effobi, a developer passionate about web and software.",
+        btn_projects: "View my projects",
+        about_title: "About Me",
+        about_bio: "I'm Morel Effobi, a software engineering student. I'm passionate about web development, programming, and designing efficient digital solutions. I combine discipline, creativity, and curiosity in my projects. My goal is to contribute to innovative projects while strengthening my full-stack development skills.",
+        projects_title: "My Projects",
+        contact_title: "Contact Me",
+        footer: "© 2025 Morel Effobi. All rights reserved."
+      }
+    };
+
+    let currentLang = "fr";
+
+    document.getElementById("toggleLang").addEventListener("click", () => {
+      currentLang = currentLang === "fr" ? "en" : "fr";
+      updateLang();
+    });
+
+    function updateLang() {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        el.innerText = translations[currentLang][key];
+      });
+      document.title = translations[currentLang].title;
+      document.getElementById("toggleLang").innerText = currentLang === "fr" ? "English" : "Français";
+    }
+  </script>
+</body>
+</html>

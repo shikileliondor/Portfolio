@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mes Projets</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4 relative">
+      <div class="text-2xl font-bold text-blue-600" data-i18n="brand">Mon Portfolio</div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 text-sm">
+        <a href="index.html" class="hover:text-blue-600 transition" data-i18n="nav_home">Accueil</a>
+        <a href="propos.html" class="hover:text-blue-600 transition" data-i18n="nav_about">À propos</a>
+        <a href="certif.html" class="hover:text-blue-600 transition" data-i18n="nav_certificates">Certificats</a>
+        <a href="projet.html" class="hover:text-blue-600 transition" data-i18n="nav_projects">Projets</a>
+        <a href="contact.html" class="hover:text-blue-600 transition" data-i18n="nav_contact">Contact</a>
+      </div>
+
+      <!-- Right controls -->
+      <div class="flex items-center space-x-4">
+        <button id="toggleLang" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          English
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-blue-600 focus:outline-none" aria-label="Menu mobile">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden absolute top-full left-0 w-full bg-white shadow-md px-4 py-4 z-20">
+        <a href="index.html" class="block py-2 border-b border-gray-200" data-i18n="nav_home">Accueil</a>
+        <a href="propos.html" class="block py-2 border-b border-gray-200" data-i18n="nav_about">À propos</a>
+        <a href="certif.html" class="block py-2 border-b border-gray-200" data-i18n="nav_certificates">Certificats</a>
+        <a href="projet.html" class="block py-2 border-b border-gray-200" data-i18n="nav_projects">Projets</a>
+        <a href="contact.html" class="block py-2" data-i18n="nav_contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Section Projets -->
+  <section id="projets" class="py-20 px-4 bg-gray-100 fade-in">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-10 text-blue-600" data-i18n="projects_title">
+        Mes Projets
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Projet 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+          <img src="sese.jpeg" alt="Projet 1" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="project1_title">Site de la bibliothèque nationale</h3>
+            <p class="text-gray-600" data-i18n="project1_desc">
+             Ce projet de refonte du site de la Bibliothèque Nationale est une excellente occasion d’apprendre et de mettre en pratique le HTML, le CSS et Bootstrap. Il permet de moderniser le site en améliorant son design et son ergonomie, tout en rendant la navigation plus facile et adaptée aux différents appareils (ordinateurs, tablettes, mobiles). Grâce à Bootstrap, le site devient responsive, c’est-à-dire qu’il s’adapte automatiquement à la taille de l’écran, offrant ainsi une meilleure expérience utilisateur. Ce travail concret aide aussi à comprendre les bonnes pratiques du développement web et à développer des compétences essentielles pour la création de sites modernes et fonctionnels.
+
+            </p>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+          <img src="Capture.JPG" alt="Projet 2" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="project2_title">Portfolio personnel</h3>
+            <p class="text-gray-600" data-i18n="project2_desc">
+        Mon portfolio personnel est développé avec Laravel, un framework PHP puissant qui facilite la création d’applications web robustes et structurées. J’utilise HTML pour structurer les pages, Tailwind CSS pour un design moderne, léger et personnalisable, et PHP pour gérer la logique côté serveur. Ce projet me permet de combiner mes connaissances en développement back-end et front-end pour créer un site responsive, performant et facile à maintenir, où je peux présenter mes compétences, 
+        mes projets et mon parcours professionnel de manière professionnelle et attrayante.
+            </p>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition">
+          <img src="WhatsApp Image 2025-08-08 at 18.10.43.jpeg" alt="Projet 3" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-gray-800" data-i18n="project3_title">Système de reservation</h3>
+            <p class="text-gray-600" data-i18n="project3_desc">
+              Ce projet consiste à développer une plateforme en ligne qui permet aux utilisateurs de réserver des tickets facilement et rapidement via WhatsApp. Grâce à une interface simple en HTML, PHP (ou Laravel) et un design avec Tailwind CSS, les utilisateurs choisissent leur événement, sélectionnent leurs places, puis envoient leur demande de réservation directement sur WhatsApp. Cette intégration facilite la communication instantanée, supprime les démarches compliquées, et offre une expérience fluide et moderne, car WhatsApp est une application largement utilisée et accessible sur mobile comme sur ordinateur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-20 text-center text-gray-500 text-sm py-4">
+    &copy; 2025 Morel Effobi - Tous droits réservés
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById("mobile-menu-btn").addEventListener("click", () => {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+
+    // Animation au scroll
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+    });
+
+    // Traduction multilingue
+    const translations = {
+  fr: {
+    brand: "Mon Portfolio",
+    nav_home: "Accueil",
+    nav_about: "À propos",
+    nav_certificates: "Certificats",
+    nav_projects: "Projets",
+    nav_contact: "Contact",
+    projects_title: "Mes Projets",
+    project1_title: "Site de la bibliothèque nationale",
+    project1_desc: "Ce projet de refonte du site de la Bibliothèque Nationale est une excellente occasion d’apprendre et de mettre en pratique le HTML, le CSS et Bootstrap. Il permet de moderniser le site en améliorant son design et son ergonomie, tout en rendant la navigation plus facile et adaptée aux différents appareils (ordinateurs, tablettes, mobiles). Grâce à Bootstrap, le site devient responsive, c’est-à-dire qu’il s’adapte automatiquement à la taille de l’écran, offrant ainsi une meilleure expérience utilisateur. Ce travail concret aide aussi à comprendre les bonnes pratiques du développement web et à développer des compétences essentielles pour la création de sites modernes et fonctionnels.",
+    project2_title: "Portfolio personnel",
+    project2_desc: "Mon portfolio personnel est développé avec Laravel, un framework PHP puissant qui facilite la création d’applications web robustes et structurées. J’utilise HTML pour structurer les pages, Tailwind CSS pour un design moderne, léger et personnalisable, et PHP pour gérer la logique côté serveur. Ce projet me permet de combiner mes connaissances en développement back-end et front-end pour créer un site responsive, performant et facile à maintenir, où je peux présenter mes compétences, mes projets et mon parcours professionnel de manière professionnelle et attrayante.",
+    project3_title: "Système de reservation",
+    project3_desc: "Ce projet consiste à développer une plateforme en ligne qui permet aux utilisateurs de réserver des tickets facilement et rapidement via WhatsApp. Grâce à une interface simple en HTML, PHP (ou Laravel) et un design avec Tailwind CSS, les utilisateurs choisissent leur événement, sélectionnent leurs places, puis envoient leur demande de réservation directement sur WhatsApp. Cette intégration facilite la communication instantanée, supprime les démarches compliquées, et offre une expérience fluide et moderne, car WhatsApp est une application largement utilisée et accessible sur mobile comme sur ordinateur."
+  },
+  en: {
+    brand: "My Portfolio",
+    nav_home: "Home",
+    nav_about: "About",
+    nav_certificates: "Certificates",
+    nav_projects: "Projects",
+    nav_contact: "Contact",
+    projects_title: "My Projects",
+    project1_title: "National Library Website",
+    project1_desc: "This project to redesign the National Library website is a great opportunity to learn and apply HTML, CSS, and Bootstrap. It modernizes the site by improving its design and usability while making navigation easier and adaptable to various devices (computers, tablets, mobiles). Thanks to Bootstrap, the site becomes responsive, automatically adjusting to screen size and providing a better user experience. This practical work also helps understand best practices in web development and develop essential skills for creating modern, functional sites.",
+    project2_title: "Personal Portfolio",
+    project2_desc: "My personal portfolio is developed with Laravel, a powerful PHP framework that facilitates building robust and structured web applications. I use HTML to structure pages, Tailwind CSS for a modern, lightweight, and customizable design, and PHP to manage server-side logic. This project allows me to combine back-end and front-end knowledge to create a responsive, performant, and maintainable site where I can showcase my skills, projects, and professional journey attractively and professionally.",
+    project3_title: "Reservation System",
+    project3_desc: "This project consists of developing an online platform that allows users to easily and quickly book tickets via WhatsApp. With a simple interface using HTML, PHP (or Laravel), and a design with Tailwind CSS, users choose their event, select their seats, and send their booking request directly on WhatsApp. This integration facilitates instant communication, removes complicated procedures, and offers a smooth, modern experience, as WhatsApp is widely used and accessible on both mobile and desktop."
+  }
+};
+
+
+    let currentLang = "fr";
+
+    document.getElementById("toggleLang").addEventListener("click", () => {
+      currentLang = currentLang === "fr" ? "en" : "fr";
+      document.getElementById("toggleLang").innerText = currentLang === "fr" ? "English" : "Français";
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        el.textContent = translations[currentLang][key];
+      });
+    });
+  </script>
+
+</body>
+</html>
